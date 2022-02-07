@@ -76,10 +76,10 @@ const h4sBottom = bottomContent.querySelectorAll('h4');
 h4sBottom[0].textContent = siteContent['main-content']['services-h4'];
 h4sBottom[1].textContent = siteContent['main-content']['product-h4'];
 h4sBottom[2].textContent = siteContent['main-content']['vision-h4'];
-const pBottom = bottomContent.querySelectorAll('p')
-pBottom[0].textContent = siteContent['main-content']['features-content'];
-pBottom[1].textContent = siteContent['main-content']['about-content'];
-pBottom[2].textContent = siteContent['main-content']['vision-content'];
+const psBottom = bottomContent.querySelectorAll('p')
+psBottom[0].textContent = siteContent['main-content']['features-content'];
+psBottom[1].textContent = siteContent['main-content']['about-content'];
+psBottom[2].textContent = siteContent['main-content']['vision-content'];
 
 //cta 
 document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
@@ -90,4 +90,6 @@ const navLinks = document.querySelectorAll('header nav a ')
 const navLinksText = Object.values(siteContent.nav)
 navLinks.forEach((link, idx) => {
   link.textContent = navLinksText[idx]
+  link.classList.add('italic')
 })
+
